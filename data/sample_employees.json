@@ -1,0 +1,12 @@
+[
+  {"id": 1,  "first_name": "Aarav",  "last_name": "Sharma",  "email": "aarav.sharma@example.com",  "department": "Engineering", "job_title": "Backend Developer",  "salary": 85000, "hire_date": "2022-03-14", "is_active": true},
+  {"id": 2,  "first_name": "Priya",  "last_name": "Nair",    "email": "priya.nair@example.com",    "department": "HR",          "job_title": "HR Manager",         "salary": 72000, "hire_date": "2020-07-01", "is_active": true},
+  {"id": 3,  "first_name": "Rohan",  "last_name": "Mehta",   "email": "rohan.mehta@example.com",   "department": "Finance",     "job_title": "Accountant",         "salary": 64000, "hire_date": "2021-11-22", "is_active": true},
+  {"id": 4,  "first_name": "Sneha",  "last_name": "Iyer",    "email": "sneha.iyer@example.com",    "department": "Engineering", "job_title": "QA Engineer",        "salary": 68000, "hire_date": "2023-01-09", "is_active": true},
+  {"id": 5,  "first_name": "Vikram", "last_name": "Singh",   "email": "vikram.singh@example.com",  "department": "Sales",       "job_title": "Sales Executive",    "salary": 58000, "hire_date": "2019-05-30", "is_active": true},
+  {"id": 6,  "first_name": "Ananya", "last_name": "Reddy",   "email": "ananya.reddy@example.com",  "department": "Engineering", "job_title": "Frontend Developer", "salary": 80000, "hire_date": "2022-09-12", "is_active": true},
+  {"id": 7,  "first_name": "Karthik","last_name": "Raman",   "email": "karthik.raman@example.com", "department": "Support",     "job_title": "Support Lead",       "salary": 61000, "hire_date": "2018-02-19", "is_active": false},
+  {"id": 8,  "first_name": "Meera",  "last_name": "Joshi",   "email": "meera.joshi@example.com",   "department": "Marketing",   "job_title": "Content Strategist", "salary": 66000, "hire_date": "2021-06-07", "is_active": true},
+  {"id": 9,  "first_name": "Arjun",  "last_name": "Patel",   "email": "arjun.patel@example.com",   "department": "Finance",     "job_title": "Financial Analyst",  "salary": 74000, "hire_date": "2020-12-01", "is_active": true},
+  {"id": 10, "first_name": "Divya",  "last_name": "Kapoor",  "email": "divya.kapoor@example.com",  "department": "HR",          "job_title": "Recruiter",          "salary": 56000, "hire_date": "2023-04-17", "is_active": true}
+]
