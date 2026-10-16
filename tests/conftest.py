@@ -13,6 +13,18 @@ import app.models  # noqa: E402,F401
 from app.db.base import Base  # noqa: E402
 from app.models import Department, Employee, Role  # noqa: E402
 
+from fastapi.testclient import TestClient  # noqa: E402
+
+from app.db.session import get_db  # noqa: E402
+from app.main import app as fastapi_app  # noqa: E402
+
+@pytest.fixture
+def client(db):
+    """HTTP client whose requests use the rolled-back test session."""
+    fastapi_app.dependency_overrides[get_db] = lambda: db
+    yield TestClient(fastapi_app)
+    fastapi_app.dependency_overrides.clear()
+
 # Change "change_me" to the POSTGRES_PASSWORD in your .env,
 # or set a TEST_DATABASE_URL environment variable.
 TEST_DB_URL = os.getenv(

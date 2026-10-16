@@ -23,3 +23,22 @@ Base URL (local): http://localhost:8000 · Format: JSON · Interactive docs: /do
 
 ## Errors
 {"detail": "Employee not found"}  (404)  ·  422 for validation errors  ·  401 if not authenticated
+
+## Changes in v0.2 (Task 3)
+- Employee updates use **PATCH** (partial), not PUT.
+- Employee response now nests `department {id,name,...}` and `role {id,title}`;
+  `department_id` / `role_id` / `manager_id` are still included.
+- `salary` is returned as a **string** (e.g. "85000.00") to avoid rounding errors with money.
+- List endpoints return `{items, total, page, size, pages}`.
+- All errors: `{"error": {"code", "message", "details"}}`
+
+| Method | Path | Notes | Success |
+|---|---|---|---|
+| GET | /employees | ?page=1&size=20&department=HR&q=asha&include_inactive=false | 200 Page |
+| POST | /employees | 409 duplicate email, 422 bad input | 201 |
+| GET | /employees/{id} | returns inactive employees too | 200 |
+| PATCH | /employees/{id} | send only changed fields | 200 |
+| DELETE | /employees/{id} | soft delete (is_active=false), idempotent | 204 |
+| GET | /employees/{id}/team | active direct reports | 200 list |
+| GET | /departments | active departments | 200 list |
+| GET | /departments/{id}/employees | paginated | 200 Page |

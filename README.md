@@ -2,6 +2,12 @@
 
 FastAPI + PostgreSQL, run with Docker Compose.
 
+## Employee API
+- Interactive docs: http://localhost:8000/docs
+- Layers: routes (HTTP only) → services (rules) → models. No business logic in routes.
+- Soft delete: DELETE sets is_active=false. Use `?include_inactive=true` to see them.
+- Errors always look like {"error": {"code", "message", "details"}}.
+
 ## Run
 1. `cp .env.example .env` and edit the values (set a real SECRET_KEY).
 2. `docker compose up --build`
